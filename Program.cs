@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Patterns.Singleton;
+﻿using DesignPatterns.Patterns.Factory;
+using DesignPatterns.Patterns.Singleton;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
             Test_Singleton();
-
+            Test_Factory();
 
             #region Wait
             Console.ReadKey();
@@ -27,6 +28,23 @@ namespace DesignPatterns
             Logger.Instance.Log("I am a singleton instance");
             #region Logs
             Console.WriteLine("\n---------Singleton tests finished---------\n"); 
+            #endregion
+        }
+
+        public static void Test_Factory()
+        {
+            #region Logs
+            Console.WriteLine("---------Factory tests started---------\n");
+            #endregion
+
+            var c = Factory.Create("customer");
+            var c2 = Factory.Create("lEad");
+
+            Console.WriteLine($"{c.GetType().Name} is created");
+            Console.WriteLine($"{c2.GetType().Name} is created");
+
+            #region Logs
+            Console.WriteLine("\n---------Factory tests finished---------\n");
             #endregion
         }
     }
