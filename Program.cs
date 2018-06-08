@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.Patterns.Factory;
 using DesignPatterns.Patterns.Singleton;
+using DesignPatterns.Patterns.Stategy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace DesignPatterns
         {
             Test_Singleton();
             Test_Factory();
-
+            Test_Strategy();
             #region Wait
             Console.ReadKey();
             #endregion
@@ -47,5 +48,23 @@ namespace DesignPatterns
             Console.WriteLine("\n---------Factory tests finished---------\n");
             #endregion
         }
+
+        public static void Test_Strategy()
+        {
+            #region Logs
+            Console.WriteLine("---------Strategy tests started---------\n");
+            #endregion
+
+            var twitter = new Twitter();
+            var chicken = new Chicken();
+
+            Console.WriteLine($"Twitter says: {twitter.FlyBehaviour.StartFlying()}");
+            Console.WriteLine($"Chicken says: {chicken.FlyBehaviour.StartFlying()}");
+
+            #region Logs
+            Console.WriteLine("\n---------Strategy tests finished---------\n");
+            #endregion
+        }
+
     }
 }

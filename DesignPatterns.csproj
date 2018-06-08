@@ -72,6 +72,12 @@
     <Compile Include="Patterns\Factory\Entities\Models\Lead.cs" />
     <Compile Include="Patterns\Factory\Factory.cs" />
     <Compile Include="Patterns\Singleton\Logger.cs" />
+    <Compile Include="Patterns\Stategy\Bird.cs" />
+    <Compile Include="Patterns\Stategy\Chicken.cs" />
+    <Compile Include="Patterns\Stategy\Contracts\IFly.cs" />
+    <Compile Include="Patterns\Stategy\Models\CanFly.cs" />
+    <Compile Include="Patterns\Stategy\Models\CannotFly.cs" />
+    <Compile Include="Patterns\Stategy\Twitter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
