@@ -10,9 +10,9 @@ namespace DesignPatterns.Patterns.Stategy
 {
     public class Twitter : Bird
     {
-        public Twitter() : base(new CanFly())
+        public Twitter()
         {
-            
+            this.FlyBehaviour = new CanFly();
         }
     }
 }

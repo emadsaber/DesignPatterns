@@ -9,8 +9,10 @@ namespace DesignPatterns.Patterns.Stategy
 {
     public abstract class Bird
     {
-        public IFly FlyBehaviour { get; }
+        public IFly FlyBehaviour { get; set; }
         public string Name { get; set; }
+
+        public Bird() { }
 
         public Bird(IFly flyBehaviour)
         {

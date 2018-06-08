@@ -10,8 +10,9 @@ namespace DesignPatterns.Patterns.Stategy
 {
     public class Chicken : Bird
     {
-        public Chicken():base(new CannotFly())
+        public Chicken()
         {
+            this.FlyBehaviour = new CannotFly();
         }
     }
 }
