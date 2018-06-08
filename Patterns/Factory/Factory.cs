@@ -20,6 +20,8 @@ namespace DesignPatterns.Patterns.Factory
                 { "Customer", new Customer() },
                 { "Lead", new Lead() },
             };
+
+            //Console.WriteLine("Factory started up");
         }
         public static CustomerBase Create(string entityName)
         {
