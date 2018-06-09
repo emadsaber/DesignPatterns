@@ -71,6 +71,10 @@
     <Compile Include="Patterns\Factory\Entities\Models\Customer.cs" />
     <Compile Include="Patterns\Factory\Entities\Models\Lead.cs" />
     <Compile Include="Patterns\Factory\Factory.cs" />
+    <Compile Include="Patterns\Observer\Contracts\IObserver.cs" />
+    <Compile Include="Patterns\Observer\Contracts\ISubject.cs" />
+    <Compile Include="Patterns\Observer\Models\Branch.cs" />
+    <Compile Include="Patterns\Observer\Models\Stock.cs" />
     <Compile Include="Patterns\Singleton\Logger.cs" />
     <Compile Include="Patterns\Stategy\Bird.cs" />
     <Compile Include="Patterns\Stategy\Chicken.cs" />

@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.Patterns.Factory;
+using DesignPatterns.Patterns.Observer.Models;
 using DesignPatterns.Patterns.Singleton;
 using DesignPatterns.Patterns.Stategy;
 using System;
@@ -13,9 +14,10 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            Test_Singleton();
-            Test_Factory();
-            Test_Strategy();
+            //Test_Singleton();
+            //Test_Factory();
+            //Test_Strategy();
+            Test_Observer();
             #region Wait
             Console.ReadKey();
             #endregion
@@ -66,5 +68,34 @@ namespace DesignPatterns
             #endregion
         }
 
+        public static void Test_Observer()
+        {
+            #region Logs
+            Console.WriteLine("---------Strategy tests started---------\n");
+            #endregion
+
+            var stock = new Stock();
+            var branch1 = new Branch(stock);
+
+            stock.IPhonePrice = 1500;
+            stock.NexusPrice = 600;
+            stock.SamsungPrice = 300;
+
+            var branch2 = new Branch(stock);
+
+            stock.IPhonePrice = 1700;
+
+            var branch3 = new Branch(stock);
+
+            stock.IPhonePrice = 2000;
+            
+            stock.Unregister(branch2);
+
+            stock.IPhonePrice = 500;
+
+            #region Logs
+            Console.WriteLine("\n---------Strategy tests finished---------\n");
+            #endregion
+        }
     }
 }
