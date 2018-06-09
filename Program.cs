@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Patterns.Factory;
+﻿using DesignPatterns.Patterns.AbstractFactory;
+using DesignPatterns.Patterns.Factory;
 using DesignPatterns.Patterns.Observer.Models;
 using DesignPatterns.Patterns.Singleton;
 using DesignPatterns.Patterns.Stategy;
@@ -17,7 +18,8 @@ namespace DesignPatterns
             //Test_Singleton();
             //Test_Factory();
             //Test_Strategy();
-            Test_Observer();
+            //Test_Observer();
+            Test_AbstractFactory();
             #region Wait
             Console.ReadKey();
             #endregion
@@ -95,6 +97,28 @@ namespace DesignPatterns
 
             #region Logs
             Console.WriteLine("\n---------Strategy tests finished---------\n");
+            #endregion
+        }
+
+        public static void Test_AbstractFactory()
+        {
+            #region Logs
+            Console.WriteLine("---------Abstract Factory tests started---------\n");
+            #endregion
+
+            var producer = new FactoryProducer();
+            var shapeFactory = producer.GetFactory("shape");
+            var colorFactory = producer.GetFactory("color");
+
+            var circle = shapeFactory.GetShape("circle");
+
+            circle.Draw();
+
+            var blue = colorFactory.GetColor("blue");
+            blue.Fill();
+
+            #region Logs
+            Console.WriteLine("---------Abstract Factory tests finished---------\n");
             #endregion
         }
     }

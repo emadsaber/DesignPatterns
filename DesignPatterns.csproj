@@ -67,6 +67,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Patterns\AbstractFactory\Contracts\AbstractFactory.cs" />
+    <Compile Include="Patterns\AbstractFactory\Contracts\IColor.cs" />
+    <Compile Include="Patterns\AbstractFactory\Contracts\IShape.cs" />
+    <Compile Include="Patterns\AbstractFactory\FactoryProducer.cs" />
+    <Compile Include="Patterns\AbstractFactory\Models\Blue.cs" />
+    <Compile Include="Patterns\AbstractFactory\Models\Circle.cs" />
+    <Compile Include="Patterns\AbstractFactory\Models\ColorFactory.cs" />
+    <Compile Include="Patterns\AbstractFactory\Models\Green.cs" />
+    <Compile Include="Patterns\AbstractFactory\Models\ShapeFactory.cs" />
+    <Compile Include="Patterns\AbstractFactory\Models\Square.cs" />
     <Compile Include="Patterns\Factory\Entities\Bases\CustomerBase.cs" />
     <Compile Include="Patterns\Factory\Entities\Models\Customer.cs" />
     <Compile Include="Patterns\Factory\Entities\Models\Lead.cs" />
